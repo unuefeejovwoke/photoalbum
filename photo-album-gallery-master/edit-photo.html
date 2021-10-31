@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Album</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<nav>
+  <div class="logo"><a href="index.html">Photo Album</a></div>
+</nav>
+<!-- MAIN (Center website) -->
+<div class="main">
+  <div class="wrapper">
+
+    <section class="image-container">
+      <img src="assets/images/img-1.png" alt="demo image">
+      <button class="btn edit-btn" type="file">Change Picture</button>
+    </section>
+    
+    <section class="form-fields">
+      <form action="contact.html" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="input-field" required>
+        </div>
+        
+        <div>
+            <label for="about">About</label>
+            <textarea name="about" required></textarea>
+        </div>
+
+        <div>
+            <label for="instagram">Instagram</label>
+            <input type="text" name="instagram" id="instagram" class="input-field" required>
+        </div>
+
+        <div>
+            <label for="twitter">Twitter</label>
+            <input type="text" name="twitter" id="twitter" class="input-field" required>
+        </div>
+
+        <div>
+            <label for="linkedin">LInkedIn</label>
+            <input type="text" name="linkedin" id="linkedin" class="input-field" required>
+        </div>
+
+        <div>
+            <label for="facebook">Facebook</label>
+            <input type="text" name="facebook" id="facebook" class="input-field" required>
+        </div>
+
+        <div>
+            <label for="quote">Favourite Quote</label>
+            <textarea name="quote" required></textarea>
+        </div>
+
+        <button class="btn add-btn" type="submit" name="submit-btn">Add Photo</button>
+      </form>
+    </section>
+
+
+  </div>
+
+<!-- END MAIN -->
+</div>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

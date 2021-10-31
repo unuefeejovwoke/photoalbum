@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Album</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alata|Josefin+Sans|Maven+Pro&display=swap" rel="stylesheet">
+
+  <script >
+    $(document).ready(function(){
+      $("#myinput").on("keyup",function(){
+      var value = $(this).val().toLowerCase();
+      $("#card div").filter(function(){
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+  
+      });
+    });
+      });
+  
+  
+  </script>
+</head>
+<body>
+<nav>
+  <div class="logo">Photo Album</div>
+  <form action="#" method="get">
+    <input type="search" name="search-bar" placeholder="search a keyword" id="myinput" class="search-bar input-field">
+    <button type="submit" class="search-btn"><i class="ri-search-line"></i></button>
+  </form>
+  <div class="nav-btn">
+    <a href="add-photo.html"><button class="btn"> EEE YEAR'21</button></a>
+  </div>
+</nav>
+
+<main class="modal" id="modal">
+  <aside class="dialogue-box">
+      <div class="content-wrapper">
+        <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+          <div class="main">
+            <aside class="btn-aside"><a href="edit-photo.html"><button class="btn edit-btn">Edit Photo</button></a></aside>
+              <div class="wrapper">
+                <section class="image-container">
+                  <img src="assets/images/img-1.png" alt="demo image">
+                <h2>John Doe</h2>
+                </section>
+                
+                <section class="about-container">
+                  <h4>About</h4>
+                  <p>Speaking about comparison of a number of the ground-breaking technology and strategic planning, a closer study of the sources and influences of the functional testing has more common features with The Enhancement of Large Leadership" (Eusebio Akin in The Book of the Entity Integrity)</p>
+                </section>
+
+                <section class="socials-container">
+                  <h4>Social Links</h4>
+                  <a href="#"><i class="fab fa-facebook social-icon"></i></a>
+                  <a href="#"><i class="fab fa-linkedin social-icon"></i></a>
+                  <a href="#"><i class="fab fa-twitter social-icon"></i></a>
+                  <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+                </section>
+
+                <section class="quote-cotainer">
+                  <h4>Favourite Quote</h4>
+                  <p>
+                    You have some queer friends, Dorothy,' she said.The queerness doesn't matter, so long as they're friends,' was the answer
+                  </p>
+                </section>
+
+
+              </div>
+
+          <!-- END MAIN -->
+          </div>
+      </div>
+    </aside>
+</main>
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<div id="myBtnContainer" class="btn-group">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('hod')"> HOD & DEAN</button>
+  <button class="btn" onclick="filterSelection('tech-lead')"> Tech Lead & Course Adviser</button>
+  <button class="btn" onclick="filterSelection('department')"> Department</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column hod">
+    <div class="content">
+      <img src="assets/images/img-1.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>John Doe</p>
+            <small>Dept. of Tech</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="column hod">
+    <div class="content">
+      <img src="assets/images/img-5.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>John Doe</p>
+            <small>Dept. of Tech</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Tech leads-->
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/ejok.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Unuefe Ejovwokoghene </p>
+            <small>Web Developer & Tech Lead</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/mudi.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Mudiaga </p>
+            <small>Photographer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/temi.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Temisan</p>
+            <small>Content Creator</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Victor.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Obaro Victor</p>
+            <small>Embedded System Developer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/aleem.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Aleem</p>
+            <small>Cloud Engineer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Fortune.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Fortune</p>
+            <small>C++ Developer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Joshua.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Holt-Emerah Joshua</p>
+            <small>Graphics Designer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Maega.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Maega</p>
+            <small>Web Developer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/img-1.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Churchill</p>
+            <small>Web Developer</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Dominic.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Dominic</p>
+            <small>Video Editor</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Desmond.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Desmond</p>
+            <small>Content Creator</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column tech-lead">
+    <div class="content">
+      <img src="assets/images/Ofejiro Sharon.png" alt="demo image" >
+      <div class="details-wrapper">
+        <div class="details-container">
+          <main>
+            <p>Ohwojeheri Sharon Ofejiro</p>
+            <small>Content Creator</small>
+          </main>
+          <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Department pics-->
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Endurance.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ogheneruona Edoja</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Emmanuella.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Emmanuella</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Edhere Rukevwe.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Edhere Rukevwe</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Justice.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Justice Oghenerume</p>
+              <small>Elect/Elect Dept. & Course Rep</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Aghogho.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Aghogho</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Akpos.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Akpos</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Amanah Raphael.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Amanah Rapheal</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ampere Success.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Akpere Success</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Azaka.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Azaka Godstime</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Caleb.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Caleb</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Chinedu.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Chinedu</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Chisom.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Chisom</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Christopher.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Christopher</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Daniel.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ukuyonronmah Oriyseweyinmi Daniel</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Joseph CHimwobi.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Chinweobi Makuachukwu Joseph</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Nathan.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Emokhare Jonathan</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Odomero.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Oboba Godswill Odomero</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ofejiro Sharon.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ohwojeheri Sharon Ofejiro</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ebunoluwa.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ebunoluwa</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Efe.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Okolobi Efe</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Elijah.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Elijah</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Emma.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Emmanuel</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Evans 2.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Evans</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Evans 1.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Adepoju Evans</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Godson Oke.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Godson Oke</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Jegede.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Jegede Precious</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Jerry.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Jerry</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Joseph Ayera.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ayera Joseph</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Kevin.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Kelvin</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Mackson.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Mackson</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ndudi.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ndudi Victor</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ogbonna Tobenna.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ogbonna Tobenna</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Nkechi.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Nkechi</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Paul.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Paul</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Pauline.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Pauline</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Prince.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Prince</p>
+              <small>NIEEE President.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Princess.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Princess</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Rukevwe.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Rukevwe</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Rume.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Benjamin Oghenerume</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Samuel Victor.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Smauel Victor</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Tega.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Tega</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ubani.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ubani Chuwkudi Victir</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Ugeh.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Ugeh Micheal</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column department">
+      <div class="content">
+        <img src="assets/images/Wilson.png" alt="demo image" >
+        <div class="details-wrapper">
+          <div class="details-container">
+            <main>
+              <p>Wilson</p>
+              <small>Elect/Elect Dept.</small>
+            </main>
+            <i class="ri-arrow-right-circle-line modal-icon" id="modalIcon" onclick="document.getElementById('modal').style.display='block'"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+<footer>
+  <div class="scroll-left-effect">
+    <p>Copyright &copy; Ejoke | Temisan | Joshua | Aleem | Maega | Desmond | Mudi | Victor</p>
+  </div>
+</footer>
+
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
